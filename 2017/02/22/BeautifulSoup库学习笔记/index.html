@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2017 | Beyond Code</title>
+  <title>BeautifulSoup极简指南 | Beyond Code</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -166,87 +166,53 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/02/22/BeautifulSoup库学习笔记/">BeautifulSoup极简指南</a></h4>
-                            
-                            <p><time datetime="2017-02-22T11:17:35.000Z"><a href="/2017/02/22/BeautifulSoup库学习笔记/">2017-02-22</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/02/21/独立博客搭建笔记-Hexo/">独立博客搭建笔记(Hexo)</a></h4>
-                            
-                            <p><time datetime="2017-02-21T04:49:41.000Z"><a href="/2017/02/21/独立博客搭建笔记-Hexo/">2017-02-21</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/02/20/文本文件压缩(Python)/">文本文件压缩(Python)</a></h4>
-                            
-                            <p><time datetime="2017-02-20T13:50:12.000Z"><a href="/2017/02/20/文本文件压缩(Python)/">2017-02-20</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-02-22T11:17:35.000Z" itemprop="datePublished">
+          2017-02-22
+      </time>
+    
+</span>
+                <h1>BeautifulSoup极简指南</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="external">BeautifulSoup 4.2.0文档</a></p>
+<p>以下的html代码会作为整个指南的示例.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">html_doc = """</div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span><span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;<span class="name">title</span>&gt;</span>The Dormouse's story<span class="tag">&lt;/<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>The Dormouse's story<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"story"</span>&gt;</span>Once upon a time there were three little sisters; and their names were</div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://example.com/elsie"</span> <span class="attr">class</span>=<span class="string">"sister"</span> <span class="attr">id</span>=<span class="string">"link1"</span>&gt;</span>Elsie<span class="tag">&lt;/<span class="name">a</span>&gt;</span>,</div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://example.com/lacie"</span> <span class="attr">class</span>=<span class="string">"sister"</span> <span class="attr">id</span>=<span class="string">"link2"</span>&gt;</span>Lacie<span class="tag">&lt;/<span class="name">a</span>&gt;</span> and</div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://example.com/tillie"</span> <span class="attr">class</span>=<span class="string">"sister"</span> <span class="attr">id</span>=<span class="string">"link3"</span>&gt;</span>Tillie<span class="tag">&lt;/<span class="name">a</span>&gt;</span>;</div><div class="line">and they lived at the bottom of a well.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"story"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>###构建BeautifulSoup对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">from bs4 import BeautifulSoup</div><div class="line">soup = BeautifulSoup(html_doc, &apos;lxml&apos;)</div></pre></td></tr></table></figure></p>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><h4 id="find-all-name-attrs-recursive-text-kwargs"><a href="#find-all-name-attrs-recursive-text-kwargs" class="headerlink" title="find_all( name , attrs , recursive , text , **kwargs )"></a>find_all( name , attrs , recursive , text , **kwargs )</h4><p><em>以列表形式返回结果</em></p>
+<ul>
+<li>name参数</li>
+</ul>
+<p>搜索名字为name的<strong>标签</strong></p>
+<ul>
+<li>keyword参数<br>如果一个参数名不是函数内置的，搜索时会将其作为标签的属性对待。即会搜索包含这个属性的<strong>标签</strong></li>
+</ul>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/02/21/独立博客搭建笔记-Hexo/">
+        独立博客搭建笔记(Hexo) →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

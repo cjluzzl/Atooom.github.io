@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>文本文件压缩(Python) | Beyond Code</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Beyond Code">
+    <meta name="author" content="Atooom">
+    <meta name="description" content="Wayne's Blog" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Beyond Code" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/tomorrow.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Beyond Code</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Atooom" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-02-20T13:50:12.000Z" itemprop="datePublished">
+          2017-02-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/python/'>python</a>
+    
+    
+</span>
+                <h1>文本文件压缩(Python)</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="压缩原理"><a href="#压缩原理" class="headerlink" title="压缩原理"></a>压缩原理</h2><p>对于文本文件，里面的每一个字符都是8位的ASCII字符.</p>
+<p>比如对于’python’, 是这样存储的:</p>
+<p>01110000 01111001 ‭01110100‬ ‭01101000‬ ‭01101111‬ 01101110‬</p>
+<p>我们可以为每个字符指定一个编码, 满足不同的字符编码不同, 出现频率高的字符分配到的编码短的条件.比如为’python’的6个字符分别分配0, 1, 00, 01, 10, 11的编码. 再将编码信息(0100011011)写入文件, 就达到了压缩的目的.</p>
+<h2 id="霍夫曼编码-Huffman-Coding"><a href="#霍夫曼编码-Huffman-Coding" class="headerlink" title="霍夫曼编码(Huffman Coding)"></a>霍夫曼编码(Huffman Coding)</h2><p><a href="https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81" target="_blank" rel="external">霍夫曼编码-维基百科</a></p>
+<p>霍夫曼编码是无损数据压缩和权编码算法. 所谓权编码, 就是根据源符号出现的概率大小分配不同长度的编码。出现概率高的符号分配短码，概率低的符号分配长码.</p>
+<p>霍夫曼编码通过构建一颗最优二叉树(一种带权路径长度最短的二叉树)来为符号分配编码.所谓树的带权路径长度，就是树中所有的叶结点的权值乘上其到根结点的路径长度. <strong>权值为符号出现频数</strong>.<br><a href="https://dn-anything-about-doc.qbox.me/document-uid18510labid2439timestamp1482735103035.png/wm" target="_blank" rel="external"></a></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h4 id="节点类"><a href="#节点类" class="headerlink" title="节点类"></a>节点类</h4><p>最优二叉树有两类节点：叶子节点(对应着源符号)，中间节点。</p>
+<ul>
+<li><p>叶子节点属性：符号值，符号值出现频数，编码</p>
+</li>
+<li><p>中间节点属性：频数(等于两个子节点频数之和)，编码，左、右子节点</p>
+</li>
+</ul>
+<p>代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">class HuffNode(object):</div><div class="line">    def __init__(self, freq, value, left_child=None, right_child=None):</div><div class="line">        self.freq = freq</div><div class="line">        self.value = value</div><div class="line">        self.huff_code = &apos;&apos;</div><div class="line">        if value is None:</div><div class="line">            self.left_child = left_child</div><div class="line">            self.right_child = right_child</div><div class="line">        else:</div><div class="line">            self.value = value</div><div class="line"></div><div class="line">    def __lt__(self, other):</div><div class="line">        return self.freq &lt; other.freq</div></pre></td></tr></table></figure></p>
+<p>由于中间节点没有符号值这一属性，所以若参数value为None, 表明是一个中间节点。此时一定要指定最后两个参数。</p>
+<p><strong>lt</strong>(self, other): lt的意思是less than, 用于实现小于比较符。意味着, 你可以直接用’&lt;’比较两个HuffNode对象。有点类似于C++的操作符重载。因为霍夫曼编码涉及到排序，所以实现了这个方法。此类方法在python中叫魔法方法，可以参考<a href="http://pyzh.readthedocs.io/en/latest/python-magic-methods-guide.html" target="_blank" rel="external">Python魔法方法指南</a>.</p>
+<h4 id="建立最优二叉树"><a href="#建立最优二叉树" class="headerlink" title="建立最优二叉树"></a>建立最优二叉树</h4><p>我们先将所有叶子节点放入<strong>优先队列</strong>。之后，每次从队列中取出两个节点，利用这两个节点的信息创建新的节点，并将新节点放回队列。如果有n个叶子节点，即源符号有n个，则进行n-1次这样的操作。最后队列剩下一个节点，即根节点，将其返回。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> queue <span class="keyword">import</span> PriorityQueue</div><div class="line"></div><div class="line"><span class="comment"># data是记录符号及其频数的字典</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">buildTree</span><span class="params">(data)</span>:</span></div><div class="line">    pq = PriorityQueue()</div><div class="line">    <span class="keyword">for</span> key, freq <span class="keyword">in</span> data.items():</div><div class="line">        pq.put(HuffNode(freq, key))</div><div class="line"></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data) - <span class="number">1</span>):</div><div class="line">        left = pq.get()</div><div class="line">        right = pq.get()</div><div class="line">        pq.put(HuffNode(left.freq + right.freq, <span class="keyword">None</span>, left, right))</div><div class="line"></div><div class="line">    <span class="keyword">return</span> pq.get()</div></pre></td></tr></table></figure>
+<h4 id="获取各个节点编码"><a href="#获取各个节点编码" class="headerlink" title="获取各个节点编码"></a>获取各个节点编码</h4><p>从根节点开始，进行BFS(广度优先搜索)。左, 右子节点的编码为其父节点的编码分别加上’0’, ‘1’.</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> queue <span class="keyword">import</span> Queue</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getCode</span><span class="params">(root)</span>:</span></div><div class="line">    q = Queue()</div><div class="line">    q.put(root)</div><div class="line"></div><div class="line">    code = &#123;&#125;</div><div class="line">    <span class="keyword">while</span> <span class="keyword">not</span> q.empty():</div><div class="line">        out = q.get()</div><div class="line">        <span class="keyword">if</span> out.value <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">            out.left_child.huff_code = out.huff_code + <span class="string">'0'</span></div><div class="line">            out.right_child.huff_code = out.huff_code + <span class="string">'1'</span></div><div class="line">            q.put(out.left_child)</div><div class="line">            q.put(out.right_child)</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            code[out.value] = out.huff_code</div><div class="line"></div><div class="line">    <span class="keyword">return</span> code</div></pre></td></tr></table></figure>
+<h4 id="对文件进行压缩"><a href="#对文件进行压缩" class="headerlink" title="对文件进行压缩"></a>对文件进行压缩</h4><h5 id="获取编码"><a href="#获取编码" class="headerlink" title="获取编码"></a>获取编码</h5><p>以二进制形式打开文件，读出来的数据是int型的，范围从0~255。代表了字符的ascii值. 统计所有数值出现的频。之后利用上面的方法构造最优二叉树和获取霍夫曼编码。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</div><div class="line"></div><div class="line">fin = open(inputfile, <span class="string">'rb'</span>)</div><div class="line">fout = open(outputfile, <span class="string">'wb'</span>)</div><div class="line"></div><div class="line">data = fin.read()</div><div class="line">freq = defaultdict(int)</div><div class="line"><span class="keyword">for</span> each <span class="keyword">in</span> data:</div><div class="line">    freq[each] += <span class="number">1</span></div><div class="line"></div><div class="line">root = buildTree(freq)</div><div class="line">huffman_code = getCode(root)</div></pre></td></tr></table></figure>
+<h5 id="写入压缩文件"><a href="#写入压缩文件" class="headerlink" title="写入压缩文件"></a>写入压缩文件</h5><p>用编码将原来的符号代替，就得到一大串01组成的字符串. 字符串的每一个’0’或’1’, 都可以看作每bit上的0或1. 想办法将字符串转换成对应的bit即可.</p>
+<p>我们先以32为单位长度切分字符串:<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">whole = <span class="string">''</span>.join([huffman_code[d] <span class="keyword">for</span> d <span class="keyword">in</span> data])</div><div class="line">splited = re.findall(<span class="string">'.&#123;1,32&#125;'</span>, whole)</div></pre></td></tr></table></figure></p>
+<p>对于每一个子串, 先将其转换成int, 再用pack函数转换成bytes, 最后将bytes写入文件.<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> each <span class="keyword">in</span> splited:</div><div class="line">    fout.write(pack(<span class="string">'I'</span>, int(each, <span class="number">2</span>)))</div></pre></td></tr></table></figure></p>
+<p>pack(fmt, v)会将值根据fmt指定的格式将v转换成bytes对象. ‘I’表示unsigned int, 大小为32bit.</p>
+<p>因为int是4字节的, 为了不让pack()的结果前面有很多0, 从而浪费空间. 所以我们以32为长度切分字符串.</p>
+<p><strong>note:</strong></p>
+<p>首先，我们需要写入一些头部信息。包括符号的个数，每个符号对应的频数。这是解压缩必要的信息。</p>
+<p>最后一串字符串长度不一定为32, 所以还要额外的将其长度记录下来。同样也是为了解压缩所必要的。</p>
+<p>代码<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> struct <span class="keyword">import</span> pack</div><div class="line"><span class="keyword">from</span> re <span class="keyword">import</span> findall</div><div class="line"></div><div class="line">fout.write(pack(<span class="string">'I'</span>, len(freq)))</div><div class="line"><span class="keyword">for</span> key, val <span class="keyword">in</span> freq.items():</div><div class="line">    fout.write(pack(<span class="string">'I'</span>, key))</div><div class="line">    fout.write(pack(<span class="string">'I'</span>, val))</div><div class="line"></div><div class="line">whole = <span class="string">''</span>.join([huffman_code[d] <span class="keyword">for</span> d <span class="keyword">in</span> data])</div><div class="line">splited = findall(<span class="string">'.&#123;1,32&#125;'</span>, whole)</div><div class="line"></div><div class="line"><span class="keyword">for</span> each <span class="keyword">in</span> splited:</div><div class="line">    fout.write(pack(<span class="string">'I'</span>, int(each, <span class="number">2</span>)))</div><div class="line">fout.write(pack(<span class="string">'I'</span>, len(splited[<span class="number">-1</span>])))</div><div class="line"></div><div class="line">fin.close()</div><div class="line">fout.close()</div></pre></td></tr></table></figure></p>
+<h4 id="对文件解压缩"><a href="#对文件解压缩" class="headerlink" title="对文件解压缩"></a>对文件解压缩</h4><p><strong>原理</strong></p>
+<p>根据压缩文件的头部信息建立最优二叉树. 接着读取后面的内容, 将每字节的信息转成成字符串(也就是压缩时得到的字符串).</p>
+<p>遍历字符串, 遇到’0’指向左子节点, 遇到’1’指向右子节点. 直到叶子节点为止, 将叶子节点的值写入解压缩文件中, 并指回根节点.</p>
+<p><strong>note</strong></p>
+<p>同样的, 最后的部分要特别处理.</p>
+<p>整个过程就是压缩逆过程，直接上代码<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> struct <span class="keyword">import</span> unpack</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">decompress</span><span class="params">(src, dest)</span>:</span></div><div class="line">    fin = open(src, <span class="string">'rb'</span>)</div><div class="line">    fout = open(dest, <span class="string">'wb'</span>)</div><div class="line"></div><div class="line">    node_num = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">    freq = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(node_num):</div><div class="line">        key = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">        val = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">        freq[key] = val</div><div class="line">    root = huffman.buildTree(freq)</div></pre></td></tr></table></figure></p>
+<h4 id="完善程序命令行参数何选项"><a href="#完善程序命令行参数何选项" class="headerlink" title="完善程序命令行参数何选项"></a>完善程序命令行参数何选项</h4><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">from</span> argparse <span class="keyword">import</span> ArgumentParser</div><div class="line"></div><div class="line">parser = ArgumentParser(description=<span class="string">'compress file using huffman coding'</span>)</div><div class="line">parser.add_argument(<span class="string">'file'</span>)</div><div class="line">parser.add_argument(<span class="string">'-d'</span>, action=<span class="string">'store_true'</span>, help=<span class="string">'decompress file'</span>)</div><div class="line">parser.add_argument(<span class="string">'-o'</span>, default=<span class="string">'a'</span>, help=<span class="string">'name of output file, "a" by default'</span>)</div><div class="line">parser.add_argument(<span class="string">'--delete'</span>, action=<span class="string">'store_true'</span>, help=<span class="string">'delete the source\</span></div><div class="line">                            file if this option is specific')</div><div class="line">args = parser.parse_args()</div><div class="line"></div><div class="line"><span class="keyword">if</span>(args.d):</div><div class="line">    decompress(args.file, args.o)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    compress(args.file, args.o)</div><div class="line">    print(<span class="string">'before compress: &#123;0&#125; Bytes'</span>.format(os.path.getsize(args.file)))</div><div class="line">    print(<span class="string">'after  compress: &#123;0&#125; Bytes'</span>.format(os.path.getsize(args.o)))</div><div class="line"></div><div class="line"><span class="keyword">if</span>(args.delete):</div><div class="line">    os.remove(args.file)</div></pre></td></tr></table></figure>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ python compress.py test_input.txt -o output</div><div class="line"></div><div class="line">before compress: <span class="number">887071</span> Bytes</div><div class="line">after  compress: <span class="number">503056</span> Bytes</div></pre></td></tr></table></figure>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2017/02/21/独立博客搭建笔记-Hexo/" style="float: left;">
+        ← 独立博客搭建笔记(Hexo)
+    </a>
+    
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Atooom. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Atooom" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
