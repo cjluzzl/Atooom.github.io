@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="python,algorithm," />
 
 
 
@@ -80,7 +80,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/logo.png?v=5.1.0" />
 
 
 
@@ -99,7 +99,7 @@
 比如对于’python’, 是这样存储的:
 01110000 01111001 ‭01110100‬ ‭01101000‬ ‭01101111‬ 01101110‬
 我们可以为每个字符指定一个编码, 满足不同的字符编码不同, 出现频率高的字符分配到的编码短的条件.比如为’python’的6个字符分别分配0, 1, 00, 01, 1">
-<meta property="og:updated_time" content="2017-02-23T08:39:05.111Z">
+<meta property="og:updated_time" content="2017-02-25T11:14:39.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文本文件压缩(Python)">
 <meta name="twitter:description" content="压缩原理对于文本文件，里面的每一个字符都是8位的ASCII字符.
@@ -400,7 +400,7 @@
 <p>遍历字符串, 遇到’0’指向左子节点, 遇到’1’指向右子节点. 直到叶子节点为止, 将叶子节点的值写入解压缩文件中, 并指回根节点.</p>
 <p><strong>note</strong></p>
 <p>同样的, 最后的部分要特别处理.</p>
-<p>整个过程就是压缩逆过程，直接上代码<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> struct <span class="keyword">import</span> unpack</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">decompress</span><span class="params">(src, dest)</span>:</span></div><div class="line">    fin = open(src, <span class="string">'rb'</span>)</div><div class="line">    fout = open(dest, <span class="string">'wb'</span>)</div><div class="line"></div><div class="line">    node_num = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">    freq = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(node_num):</div><div class="line">        key = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">        val = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">        freq[key] = val</div><div class="line">    root = huffman.buildTree(freq)</div></pre></td></tr></table></figure></p>
+<p>整个过程就是压缩逆过程，直接上代码<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> struct <span class="keyword">import</span> unpack</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">decompress</span><span class="params">(src, dest)</span>:</span></div><div class="line">    fin = open(src, <span class="string">'rb'</span>)</div><div class="line">    fout = open(dest, <span class="string">'wb'</span>)</div><div class="line"></div><div class="line">    node_num = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">    freq = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(node_num):</div><div class="line">        key = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">        val = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">        freq[key] = val</div><div class="line">    root = huffman.buildTree(freq)</div><div class="line"></div><div class="line">    splited = []</div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">        data = fin.read(<span class="number">4</span>)</div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> data:</div><div class="line">            <span class="keyword">break</span></div><div class="line">        code = bin(unpack(<span class="string">'I'</span>, data)[<span class="number">0</span>])[<span class="number">2</span>:].zfill(<span class="number">32</span>)</div><div class="line">        splited.append(code)</div><div class="line"></div><div class="line">    length = int(splited.pop(), <span class="number">2</span>)</div><div class="line">    splited[<span class="number">-1</span>] = splited[<span class="number">-1</span>][-length:]</div><div class="line">    whole = <span class="string">''</span>.join(splited)</div><div class="line"></div><div class="line">    cur = root</div><div class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> whole:</div><div class="line">        cur = cur.left_child <span class="keyword">if</span> each == <span class="string">'0'</span> <span class="keyword">else</span> cur.right_child</div><div class="line">        <span class="keyword">if</span> cur.value <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</div><div class="line">            fout.write(int2byte(cur.value))</div><div class="line">            cur = root</div><div class="line"></div><div class="line">    fin.close()</div><div class="line">    fout.close()</div></pre></td></tr></table></figure></p>
 <h4 id="完善程序命令行参数何选项"><a href="#完善程序命令行参数何选项" class="headerlink" title="完善程序命令行参数何选项"></a>完善程序命令行参数何选项</h4><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">from</span> argparse <span class="keyword">import</span> ArgumentParser</div><div class="line"></div><div class="line">parser = ArgumentParser(description=<span class="string">'compress file using huffman coding'</span>)</div><div class="line">parser.add_argument(<span class="string">'file'</span>)</div><div class="line">parser.add_argument(<span class="string">'-d'</span>, action=<span class="string">'store_true'</span>, help=<span class="string">'decompress file'</span>)</div><div class="line">parser.add_argument(<span class="string">'-o'</span>, default=<span class="string">'a'</span>, help=<span class="string">'name of output file, "a" by default'</span>)</div><div class="line">parser.add_argument(<span class="string">'--delete'</span>, action=<span class="string">'store_true'</span>, help=<span class="string">'delete the source\</span></div><div class="line">                            file if this option is specific')</div><div class="line">args = parser.parse_args()</div><div class="line"></div><div class="line"><span class="keyword">if</span>(args.d):</div><div class="line">    decompress(args.file, args.o)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    compress(args.file, args.o)</div><div class="line">    print(<span class="string">'before compress: &#123;0&#125; Bytes'</span>.format(os.path.getsize(args.file)))</div><div class="line">    print(<span class="string">'after  compress: &#123;0&#125; Bytes'</span>.format(os.path.getsize(args.o)))</div><div class="line"></div><div class="line"><span class="keyword">if</span>(args.delete):</div><div class="line">    os.remove(args.file)</div></pre></td></tr></table></figure>
 <h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ python compress.py test_input.txt -o output</div><div class="line"></div><div class="line">before compress: <span class="number">887071</span> Bytes</div><div class="line">after  compress: <span class="number">503056</span> Bytes</div></pre></td></tr></table></figure>
 
@@ -427,6 +427,8 @@
         <div class="post-tags">
           
             <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
           
         </div>
       
@@ -530,7 +532,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
