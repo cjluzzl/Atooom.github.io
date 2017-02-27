@@ -167,6 +167,63 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-Hexo博客笔记"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/02/27/Hexo博客笔记/">Hexo博客笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/02/27/Hexo博客笔记/" class="article-date">
+	  <time datetime="2017-02-27T09:07:09.000Z" itemprop="datePublished">2017-02-27</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>记录踩过的坑和一些感悟</strong></p>
+<h3 id="大道至简"><a href="#大道至简" class="headerlink" title="大道至简"></a>大道至简</h3><p>在博客配置完成后, 试过不下10个主题.</p>
+<p>作为一个肤浅的人, 自然喜欢折腾这些华丽的外在. 配置主题耗费了大量时间. 从logo到背景图, 到文章配图, 不可谓少花时间.</p>
+<p>虽说不指望多少人回访问博客, 但至少自己看着也是赏心悦目.</p>
+<p>但折腾几天就觉得索然无趣. 自己的初衷本是利用博客督促自己写作, 记录遇到的问题, 总结做过的事情. 就像一本允许外人翻看的日记.</p>
+<p>最后, 我放弃了之前所有的主题, 选择了一个颜值和简洁兼备的<a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank" rel="external">Hibek</a>主题. </p>
+<p><strong>新鲜感总会过去</strong>. </p>
+<h3 id="文章预览"><a href="#文章预览" class="headerlink" title="文章预览"></a>文章预览</h3><p>配置好<a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank" rel="external">Hibek</a>主题后发现, 在HOME页的文章列表中, 文章内容全部被显示了. 不仅不方便, 而且奇丑无比.<br>而在主题配置文件中, 并没有显示预览长度的选项.</p>
+<p><em>解决方法</em>:</p>
+<p>在你希望显示的内容的下边添加一行<code>&lt;!-- more --&gt;</code>, 这之后的内容就不会显示在预览上了.</p>
+<h3 id="npm更换安装源"><a href="#npm更换安装源" class="headerlink" title="npm更换安装源"></a>npm更换安装源</h3><p>npm的源在国外,由于众所周知的原因,国内下载速度很慢.<br>经常会导致安装失败</p>
+<p>可以参考:<a href="http://www.jianshu.com/p/0deb70e6f395" target="_blank" rel="external">npm换源</a></p>
+<h3 id="学习git"><a href="#学习git" class="headerlink" title="学习git"></a>学习git</h3><p>早就知道git的强大和重要了, 但由于没有实际的需要, 没有认真学习过.</p>
+<p>由于使用hexo需要安装git, 而且我也是配合GitHub Pages来搭建博客, 所以干脆将git学习了一遍. 参考: <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a></p>
+<p><strong>技术的学习需要需求的驱动.</strong> 有了学习的目的, 学起来才不盲目, 不累.</p>
+<h3 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h3><p>很幸运, 遇到的问题都能在网上找到解决方法. </p>
+<p>我想我能遇到的绝大部分问题, 都早有人遇到过了. 他们中的一些选择把自己踩过的坑分享出来, 方便了我这种后来者.</p>
+<p>无论写的好与差, 无疑都是值得感谢的.</p>
+<p><strong>Ideas worth spreading.</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-MarkDown Syntax"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -191,7 +248,8 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="为什么使用markdown"><a href="#为什么使用markdown" class="headerlink" title="为什么使用markdown"></a>为什么使用markdown</h3><ol>
+        <p><img src="http://om0tbjmwl.bkt.clouddn.com/keyboard.jpg" alt=""></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="为什么使用markdown"><a href="#为什么使用markdown" class="headerlink" title="为什么使用markdown"></a>为什么使用markdown</h3><ol>
 <li>用markdown写成的文件是纯文本文件, 任何Text Editor都能打开.</li>
 <li>语法简单, 只要10分钟的学习就可以开始写作.</li>
 <li>轻松转换成pdf, html的文件格式</li>
@@ -207,7 +265,8 @@
 <p><strong>本文由MarkdownEditor撰写.</strong></p>
 <h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>段落的前后应该至少有一个空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）.</p>
 <p>值得一提的是, 没必要在段首用空格或制表符来缩进. 一方面段落间的空白已足够区分两个段落, 另一方面markdown也不支持.</p>
-        <!-- 前言为什么使用markdown
+        <!-- 
+前言为什么使用markdown
 用markdown写成的文件是纯文本文件, 任何Text Editor都能打开.
 语法简单, 只要10分钟的学习就可以开始写作.
 轻松转换成pdf, html的文件格式
@@ -215,7 +274,7 @@
 比起用word写作, markdown减少了手在键盘和鼠标间的切换, 让你更专注写作.
 
 推荐markdown编辑器(windows)
-MarkDownEdi......  -->
+MarkDownEd......  -->
         <p class="article-more-link">
           <a href="/2017/02/26/MarkDown Syntax/#more">Read More</a>
         </p>
