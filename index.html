@@ -1,911 +1,374 @@
-<!doctype html>
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
+  <title>CODE is POETRY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/logo.png?v=5.1.0" />
-
-
-
-
-
-
-<meta name="description" content="一个迟钝的人">
+  <meta name="description" content="Nothing is pure. But solitude.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="后知后觉">
+<meta property="og:title" content="CODE is POETRY">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="后知后觉">
-<meta property="og:description" content="一个迟钝的人">
+<meta property="og:site_name" content="CODE is POETRY">
+<meta property="og:description" content="Nothing is pure. But solitude.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="后知后觉">
-<meta name="twitter:description" content="一个迟钝的人">
+<meta name="twitter:title" content="CODE is POETRY">
+<meta name="twitter:description" content="Nothing is pure. But solitude.">
+  
+    <link rel="alternate" href="/atom.xml" title="CODE is POETRY" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/logo.png">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
 
+  <script src="/js/jquery-3.1.1.min.js"></script>
 
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+  
+    <link rel="stylesheet" href="/css/home.css" >
+  
 
+  
 
+  
 
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-
-
-
-  <title> 后知后觉 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body>
+  
+    <header id="header">
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div id="intrologo" class="intro-logo">
   
-  
+
+    <canvas width="100%" height="100%"></canvas>
+    <script>
+      var c = document.getElementsByTagName('canvas')[0],
+          x = c.getContext('2d'),
+          w = window.innerWidth,
+          h = window.innerHeight,
+          pr = window.devicePixelRatio || 1,
+          f = 90,
+          q,
+          m = Math,
+          r = 0,
+          u = m.PI*2,
+          v = m.cos,
+          z = m.random
+      c.width = w*pr
+      c.height = h*pr
+      x.scale(pr, pr)
+      x.globalAlpha = 0.6
+
+      
+        function i(){
+            x.clearRect(0,0,w,h)
+            q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
+            while(q[1].x<w+f) d(q[0], q[1])
+        }
+        function d(i,j){   
+            x.beginPath()
+            x.moveTo(i.x, i.y)
+            x.lineTo(j.x, j.y)
+            var k = j.x + (z()*2-0.25)*f,
+                n = y(j.y)
+            x.lineTo(k, n)
+            x.closePath()
+            r-=u/-50
+            x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)
+            x.fill()
+            q[0] = q[1]
+            q[1] = {x:k,y:n}
+        }
+        function y(p){
+            var t = p + (z()*2-1.1)*f
+            return (t>h||t<0) ? y(p) : t
+        }
+        document.getElementById("intrologo").onclick = i
+        document.getElementById("intrologo").ontouchstart = i
+        i()
+      
+    </script>
     
-  
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+    
+      <div id="homelogo" class="homelogo"> 
     
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">后知后觉</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+        
+          <div class="homelogoback" >
+            <h1><a href="#content" id="logo">CODE is POETRY</a></h1>
+            <h3>Nothing is pure. But solitude.</h3>
+            <h5>Wayne</h5>
+            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
+          </div>
+        
+    
     </div>
-      
-        <p class="site-subtitle">又过了一个秋</p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <!-- 自适应主页背景大图 -->
+  
+
+ <!-- home_logo_image居中 -->
+ 
+    <script>
+        var homelogodiv = document.getElementById("homelogo");
+        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
+          homelogodiv.style.width = document.body.clientWidth + "px";
+          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+        } else {
+          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
+          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
+        }
+    </script>
+  
+
+  <div class="intro-navigate">
+      <p class="navigater-list">
+        
+          <a id="beautifont" class="main-nav-link" href="/">Home</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/archives">Archives</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/categories">Categories</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/about">About</a>
+        
+      </p>
   </div>
-</div>
 
-<nav class="site-nav">
+</header>
   
-
+  <div id="container">
+    <div id="wrap">
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;">
   
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            站点地图
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
+    <article id="post-MarkDown Syntax"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/22/爬取豆瓣电影来简单认识BeautifulSoup/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Wayne">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="后知后觉">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="后知后觉" src="">
-    </span>
-  </span>
-
     
-      <header class="post-header">
-
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/22/爬取豆瓣电影来简单认识BeautifulSoup/" itemprop="url">
-                  爬取豆瓣电影来简单认识BeautifulSoup
-                </a>
-              
-            
-          </h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/02/26/MarkDown Syntax/">MarkDown Syntax</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-22T19:17:35+08:00">
-                2017-02-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-meta">
       
-      
+	<a href="/2017/02/26/MarkDown Syntax/" class="article-date">
+	  <time datetime="2017-02-26T13:50:12.000Z" itemprop="datePublished">2017-02-26</time>
+	</a>
 
-      
-        
-          
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><strong>多年以后, 还是无法忘记被正则表达式所支配的恐惧</strong></p>
-<p>正则表达式(regular expression)是个好东西, 然而对我们普通人很不友好. 如果你想用re解决一个问题, 那么你将会得到两个问题.</p>
-<p>BeautifulSoup是python的第三方库, 用于解析HTML/XML. 告诉程序做什么, 而不是怎么做, 这是坠吼的. bs就提供了相对符合要求的方法.</p>
-<p>我们通过爬取豆瓣电影来掌握bs的基本, 也是很重要的方法. 当然, 这里只是针对单个页面, 告诉你如何用bs来提取信息, 而不是做一个爬虫.</p>
-<p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html#id24" target="_blank" rel="external">BeautifulSoup4.4.0官方文档</a></p>
-<p><a href="https://movie.douban.com/subject/26325320/?tag=%E7%83%AD%E9%97%A8&amp;from=gaia_video" target="_blank" rel="external">我们要抓取的页面</a></p>
-<p>抓取如下信息</p>
-<ul>
-<li>名称</li>
-<li>年份</li>
-<li>导演</li>
-<li>主演</li>
-<li>类型</li>
-<li>制片国家</li>
-<li>平均分, 评分人数, 评分分布(百分比)</li>
-</ul>
-<h3 id="Tag-amp-BeautifulSoup"><a href="#Tag-amp-BeautifulSoup" class="headerlink" title="Tag &amp; BeautifulSoup"></a>Tag &amp; BeautifulSoup</h3><blockquote>
-<p>Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种: Tag , NavigableString , BeautifulSoup , Comment.</p>
-</blockquote>
-<p>在这里我们更关注Tag和BeautifulSoup.</p>
-<p>Tag: 就是html中的标签, 有名字(name), 属性(attrs), 还有很多遍历和搜索的方法. 可以像字典那样操作属性.</p>
-<p>BeautifulSoup: 代表整个html文档. 没有属性, 在遍历和搜索上类似于Tag.</p>
-<h3 id="主要方法"><a href="#主要方法" class="headerlink" title="主要方法"></a>主要方法</h3><p>抓取信息, 无非是对指定页面的源代码进行搜索</p>
-<ul>
-<li>find_all(name, attrs, recursive, text, **kwargs)</li>
-<li>find(name, attrs, recursive, text, **kwargs)</li>
-<li>select()</li>
-</ul>
-<p>前面两个方法区别在于: find_all()返回一个包含所有目标对象的列表(可用limit参数指定个数), find()只找一个, 并直接返回对象.</p>
-<p>find_all() 方法没有找到目标是返回空列表, find() 方法找不到目标时,返回 None.</p>
-<p>select()的参数如CSS选择器, 对熟悉CSS的人来说非常方便. 其返回一个列表.</p>
-<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><h4 id="构建BeautifulSoup对象"><a href="#构建BeautifulSoup对象" class="headerlink" title="构建BeautifulSoup对象"></a>构建BeautifulSoup对象</h4><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</div><div class="line"></div><div class="line">req = requests.get(<span class="string">'https://movie.douban.com/subject/26325320/'</span>)</div><div class="line">data = BeautifulSoup(req.text, <span class="string">'lxml'</span>)</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"info"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> &gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'pl'</span>&gt;</span>导演<span class="tag">&lt;/<span class="name">span</span>&gt;</span>: <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'attrs'</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1054530/"</span> <span class="attr">rel</span>=<span class="string">"v:directedBy"</span>&gt;</span>梅尔·吉布森<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> &gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'pl'</span>&gt;</span>编剧<span class="tag">&lt;/<span class="name">span</span>&gt;</span>: <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'attrs'</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1288751/"</span>&gt;</span>安德鲁·奈特<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1032789/"</span>&gt;</span>罗伯特·申坎<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"actor"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'pl'</span>&gt;</span>主演<span class="tag">&lt;/<span class="name">span</span>&gt;</span>: <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'attrs'</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1022620/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>安德鲁·加菲尔德<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1000147/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>萨姆·沃辛顿<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1002673/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>文斯·沃恩<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1040994/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>雨果·维文<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1338326/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>卢克·布雷西<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1031836/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>泰莉莎·帕尔墨<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1036393/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>瑞切尔·格里菲斯<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1317678/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>纳撒尼尔·布佐尼克<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1013865/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>理查德·劳斯伯格<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1333641/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>马特·纳夫莱<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1087341/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>费拉斯·迪拉尼<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1186069/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>瑞安·柯尔<span class="tag">&lt;/<span class="name">a</span>&gt;</span> / <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/celebrity/1317914/"</span> <span class="attr">rel</span>=<span class="string">"v:starring"</span>&gt;</span>卢克·佩格勒<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"pl"</span>&gt;</span>类型:<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">property</span>=<span class="string">"v:genre"</span>&gt;</span>剧情<span class="tag">&lt;/<span class="name">span</span>&gt;</span> / <span class="tag">&lt;<span class="name">span</span> <span class="attr">property</span>=<span class="string">"v:genre"</span>&gt;</span>动作<span class="tag">&lt;/<span class="name">span</span>&gt;</span> / <span class="tag">&lt;<span class="name">span</span> <span class="attr">property</span>=<span class="string">"v:genre"</span>&gt;</span>传记<span class="tag">&lt;/<span class="name">span</span>&gt;</span> / <span class="tag">&lt;<span class="name">span</span> <span class="attr">property</span>=<span class="string">"v:genre"</span>&gt;</span>历史<span class="tag">&lt;/<span class="name">span</span>&gt;</span> / <span class="tag">&lt;<span class="name">span</span> <span class="attr">property</span>=<span class="string">"v:genre"</span>&gt;</span>战争<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"pl"</span>&gt;</span>官方网站:<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.hacksawridge.movie/"</span> <span class="attr">rel</span>=<span class="string">"nofollow"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>www.hacksawridge.movie/<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"pl"</span>&gt;</span>制片国家/地区:<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 美国 / 澳大利亚<span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"pl"</span>&gt;</span>语言:<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 英语<span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"pl"</span>&gt;</span>上映日期:<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">property</span>=<span class="string">"v:initialReleaseDate"</span> <span class="attr">content</span>=<span class="string">"2016-12-08(中国大陆)"</span>&gt;</span>2016-12-08(中国大陆)<span class="tag">&lt;/<span class="name">span</span>&gt;</span> / <span class="tag">&lt;<span class="name">span</span> <span class="attr">property</span>=<span class="string">"v:initialReleaseDate"</span> <span class="attr">content</span>=<span class="string">"2016-11-04(美国)"</span>&gt;</span>2016-11-04(美国)<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"pl"</span>&gt;</span>片长:<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">property</span>=<span class="string">"v:runtime"</span> <span class="attr">content</span>=<span class="string">"139"</span>&gt;</span>139分钟(中国大陆)<span class="tag">&lt;/<span class="name">span</span>&gt;</span> / 140分钟(美国)<span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"pl"</span>&gt;</span>又名:<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 钢锯岭 / 钢铁英雄(台) / The Conscientious Objector<span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"pl"</span>&gt;</span>IMDb链接:<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.imdb.com/title/tt2119532"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">rel</span>=<span class="string">"nofollow"</span>&gt;</span>tt2119532<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>这是页面的一段源代码. 我们先来找导演.<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#'span' 对应name参数, 查找所有名字为span的tag,字符串对象会被自动忽略掉.</span></div><div class="line"><span class="comment"># 不在函数参数列表中的参数会被当作tag的属性搜索(property)</span></div><div class="line">print(data.find_all(<span class="string">'span'</span>, property=<span class="string">'v:itemreviewed'</span>, limit=<span class="number">1</span>))</div><div class="line"></div><div class="line"><span class="comment"># 上面方法的简写</span></div><div class="line">print(data(<span class="string">'span'</span>, property=<span class="string">'v:itemreviewed'</span>, limit=<span class="number">1</span>))</div><div class="line"></div><div class="line"><span class="comment"># 用find方法, 即只查找一个</span></div><div class="line">print(data.find(<span class="string">'span'</span>, property=<span class="string">'v:itemreviewed'</span>))</div><div class="line"></div><div class="line"><span class="comment"># CSS选择器: 通过标签的属性来查找</span></div><div class="line">print(data.select(<span class="string">'span[property="v:itemreviewed"]'</span>))</div></pre></td></tr></table></figure></p>
-<p>结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[&lt;span property=&quot;v:itemreviewed&quot;&gt;血战钢锯岭 Hacksaw Ridge&lt;/span&gt;]</div><div class="line">[&lt;span property=&quot;v:itemreviewed&quot;&gt;血战钢锯岭 Hacksaw Ridge&lt;/span&gt;]</div><div class="line">&lt;span property=&quot;v:itemreviewed&quot;&gt;血战钢锯岭 Hacksaw Ridge&lt;/span&gt;</div><div class="line">[&lt;span property=&quot;v:itemreviewed&quot;&gt;血战钢锯岭 Hacksaw Ridge&lt;/span&gt;]</div></pre></td></tr></table></figure></p>
-<p><strong>只有第三个是标签对象, 其它均是列表</strong><br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># CSS选择器: 按CSS类名查找年份</span></div><div class="line">year_tag = data.select(<span class="string">'span.year'</span>)[<span class="number">0</span>]</div><div class="line">year = year_tag.text[<span class="number">1</span>:<span class="number">-1</span>]</div><div class="line">print(year)</div></pre></td></tr></table></figure></p>
-<p>结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2016</div></pre></td></tr></table></figure></p>
-
-          
-        
       
     </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://pic119.nipic.com/file/20161231/537450_015516020000_2.jpg" alt=""></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>本文由markdown写成</strong></p>
+<p><strong>写作工具:<a href="http://chenguanzhou.github.io/MarkDownEditor/" title="Offical Website">MarkDown Editor</a></strong></p>
+<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>段落的前后应该至少有一个空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）.</p>
+<p>值得一提的是, 没必要在段首用空格或制表符来缩进. 一方面段落间的空白已足够区分两个段落, 另一方面markdown也不支持.</p>
+        <!-- 
+前言本文由markdown写成
+写作工具:MarkDown Editor
+段落段落的前后应该至少有一个空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）.
+值得一提的是, 没必要在段首用空格或制表符来缩进. 一方面段落间的空白已足够区分两个段落, 另一方面markdown也不支持.
 
-    <div>
+标题在行首插入 1 到 6 个 # ，对应......  -->
+        <p class="article-more-link">
+          <a href="/2017/02/26/MarkDown Syntax/#more">Read More</a>
+        </p>
       
     </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
 
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
     </footer>
-  </article>
+  </div>
+  
+</article>
 
+<!-- Table of Contents -->
 
+  
+    <article id="post-文本文件压缩(Python)"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/21/独立博客搭建笔记-Hexo/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Wayne">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="后知后觉">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="后知后觉" src="">
-    </span>
-  </span>
-
     
-      <header class="post-header">
-
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/21/独立博客搭建笔记-Hexo/" itemprop="url">
-                  独立博客搭建笔记(Hexo)
-                </a>
-              
-            
-          </h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/02/20/文本文件压缩(Python)/">文本文件压缩(Python)</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-21T12:49:41+08:00">
-                2017-02-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-meta">
       
-      
+	<a href="/2017/02/20/文本文件压缩(Python)/" class="article-date">
+	  <time datetime="2017-02-20T13:50:12.000Z" itemprop="datePublished">2017-02-20</time>
+	</a>
 
-      
-        
-          
-            <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h4 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h4><p><a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="external">Node.js下载</a></p>
-<p>安装完成后命令行输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm -v</div></pre></td></tr></table></figure></p>
-<p>输出版本号说明安装成功</p>
-<h4 id="git"><a href="#git" class="headerlink" title="git"></a>git</h4><p><a href="https://git-scm.com/downloads" target="_blank" rel="external">git windows下载</a></p>
-<p>安装完成后命令行输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git --version</div></pre></td></tr></table></figure></p>
-<p>输出版本号说明安装成功</p>
-<h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h4><p>命令行输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">npm install hexo --save</div></pre></td></tr></table></figure></p>
-<p>安装完成后命令行输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo v</div></pre></td></tr></table></figure></p>
-<p>输出版本号说明安装成功</p>
-
-          
-        
       
     </div>
-
-    <div>
+    <div class="article-entry" itemprop="articleBody">
       
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/20/文本文件压缩(Python)/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Wayne">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="后知后觉">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="后知后觉" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/20/文本文件压缩(Python)/" itemprop="url">
-                  文本文件压缩(Python)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-20T21:50:12+08:00">
-                2017-02-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="压缩原理"><a href="#压缩原理" class="headerlink" title="压缩原理"></a>压缩原理</h2><p>对于文本文件，里面的每一个字符都是8位的ASCII字符.</p>
+        <h2 id="压缩原理"><a href="#压缩原理" class="headerlink" title="压缩原理"></a>压缩原理</h2><p>对于文本文件，里面的每一个字符都是8位的ASCII字符.</p>
 <p>比如对于’python’, 是这样存储的:</p>
 <p>01110000 01111001 ‭01110100‬ ‭01101000‬ ‭01101111‬ 01101110‬</p>
 <p>我们可以为每个字符指定一个编码, 满足不同的字符编码不同, 出现频率高的字符分配到的编码短的条件.比如为’python’的6个字符分别分配0, 1, 00, 01, 10, 11的编码. 再将编码信息(0100011011)写入文件, 就达到了压缩的目的.</p>
-<h2 id="霍夫曼编码-Huffman-Coding"><a href="#霍夫曼编码-Huffman-Coding" class="headerlink" title="霍夫曼编码(Huffman Coding)"></a>霍夫曼编码(Huffman Coding)</h2><p><a href="https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81" target="_blank" rel="external">霍夫曼编码-维基百科</a></p>
+<h2 id="霍夫曼编码-Huffman-Coding"><a href="#霍夫曼编码-Huffman-Coding" class="headerlink" title="霍夫曼编码(Huffman Coding)"></a>霍夫曼编码(Huffman Coding)</h2><p><a href="https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81">霍夫曼编码-维基百科</a></p>
 <p>霍夫曼编码是无损数据压缩和权编码算法. 所谓权编码, 就是根据源符号出现的概率大小分配不同长度的编码。出现概率高的符号分配短码，概率低的符号分配长码.</p>
-<p>霍夫曼编码通过构建一颗最优二叉树(一种带权路径长度最短的二叉树)来为符号分配编码.所谓树的带权路径长度，就是树中所有的叶结点的权值乘上其到根结点的路径长度. <strong>权值为符号出现频数</strong>.<br><a href="https://dn-anything-about-doc.qbox.me/document-uid18510labid2439timestamp1482735103035.png/wm" target="_blank" rel="external"></a></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h4 id="节点类"><a href="#节点类" class="headerlink" title="节点类"></a>节点类</h4><p>最优二叉树有两类节点：叶子节点(对应着源符号)，中间节点。</p>
-<ul>
-<li><p>叶子节点属性：符号值，符号值出现频数，编码</p>
-</li>
-<li><p>中间节点属性：频数(等于两个子节点频数之和)，编码，左、右子节点</p>
-</li>
-</ul>
-<p>代码:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HuffNode</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, freq, value, left_child=None, right_child=None)</span>:</span></div><div class="line">        self.freq = freq</div><div class="line">        self.value = value</div><div class="line">        self.huff_code = <span class="string">''</span></div><div class="line">        <span class="keyword">if</span> value <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">            self.left_child = left_child</div><div class="line">            self.right_child = right_child</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            self.value = value</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__lt__</span><span class="params">(self, other)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.freq &lt; other.freq</div></pre></td></tr></table></figure></p>
-<p>由于中间节点没有符号值这一属性，所以若参数value为None, 表明是一个中间节点。此时一定要指定最后两个参数。</p>
-<p><strong>lt</strong>(self, other): lt的意思是less than, 用于实现小于比较符。意味着, 你可以直接用’&lt;’比较两个HuffNode对象。有点类似于C++的操作符重载。因为霍夫曼编码涉及到排序，所以实现了这个方法。此类方法在python中叫魔法方法，可以参考<a href="http://pyzh.readthedocs.io/en/latest/python-magic-methods-guide.html" target="_blank" rel="external">Python魔法方法指南</a>.</p>
-<h4 id="建立最优二叉树"><a href="#建立最优二叉树" class="headerlink" title="建立最优二叉树"></a>建立最优二叉树</h4><p>我们先将所有叶子节点放入<strong>优先队列</strong>。之后，每次从队列中取出两个节点，利用这两个节点的信息创建新的节点，并将新节点放回队列。如果有n个叶子节点，即源符号有n个，则进行n-1次这样的操作。最后队列剩下一个节点，即根节点，将其返回。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> queue <span class="keyword">import</span> PriorityQueue</div><div class="line"></div><div class="line"><span class="comment"># data是记录符号及其频数的字典</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">buildTree</span><span class="params">(data)</span>:</span></div><div class="line">    pq = PriorityQueue()</div><div class="line">    <span class="keyword">for</span> key, freq <span class="keyword">in</span> data.items():</div><div class="line">        pq.put(HuffNode(freq, key))</div><div class="line"></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data) - <span class="number">1</span>):</div><div class="line">        left = pq.get()</div><div class="line">        right = pq.get()</div><div class="line">        pq.put(HuffNode(left.freq + right.freq, <span class="keyword">None</span>, left, right))</div><div class="line"></div><div class="line">    <span class="keyword">return</span> pq.get()</div></pre></td></tr></table></figure>
-<h4 id="获取各个节点编码"><a href="#获取各个节点编码" class="headerlink" title="获取各个节点编码"></a>获取各个节点编码</h4><p>从根节点开始，进行BFS(广度优先搜索)。左, 右子节点的编码为其父节点的编码分别加上’0’, ‘1’.</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> queue <span class="keyword">import</span> Queue</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getCode</span><span class="params">(root)</span>:</span></div><div class="line">    q = Queue()</div><div class="line">    q.put(root)</div><div class="line"></div><div class="line">    code = &#123;&#125;</div><div class="line">    <span class="keyword">while</span> <span class="keyword">not</span> q.empty():</div><div class="line">        out = q.get()</div><div class="line">        <span class="keyword">if</span> out.value <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">            out.left_child.huff_code = out.huff_code + <span class="string">'0'</span></div><div class="line">            out.right_child.huff_code = out.huff_code + <span class="string">'1'</span></div><div class="line">            q.put(out.left_child)</div><div class="line">            q.put(out.right_child)</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            code[out.value] = out.huff_code</div><div class="line"></div><div class="line">    <span class="keyword">return</span> code</div></pre></td></tr></table></figure>
-<h4 id="对文件进行压缩"><a href="#对文件进行压缩" class="headerlink" title="对文件进行压缩"></a>对文件进行压缩</h4><h5 id="获取编码"><a href="#获取编码" class="headerlink" title="获取编码"></a>获取编码</h5><p>以二进制形式打开文件，读出来的数据是int型的，范围从0~255。代表了字符的ascii值. 统计所有数值出现的频。之后利用上面的方法构造最优二叉树和获取霍夫曼编码。</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</div><div class="line"></div><div class="line">fin = open(inputfile, <span class="string">'rb'</span>)</div><div class="line">fout = open(outputfile, <span class="string">'wb'</span>)</div><div class="line"></div><div class="line">data = fin.read()</div><div class="line">freq = defaultdict(int)</div><div class="line"><span class="keyword">for</span> each <span class="keyword">in</span> data:</div><div class="line">    freq[each] += <span class="number">1</span></div><div class="line"></div><div class="line">root = buildTree(freq)</div><div class="line">huffman_code = getCode(root)</div></pre></td></tr></table></figure>
-<h5 id="写入压缩文件"><a href="#写入压缩文件" class="headerlink" title="写入压缩文件"></a>写入压缩文件</h5><p>用编码将原来的符号代替，就得到一大串01组成的字符串. 字符串的每一个’0’或’1’, 都可以看作每bit上的0或1. 想办法将字符串转换成对应的bit即可.</p>
-<p>我们先以32为单位长度切分字符串:<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">whole = <span class="string">''</span>.join([huffman_code[d] <span class="keyword">for</span> d <span class="keyword">in</span> data])</div><div class="line">splited = re.findall(<span class="string">'.&#123;1,32&#125;'</span>, whole)</div></pre></td></tr></table></figure></p>
-<p>对于每一个子串, 先将其转换成int, 再用pack函数转换成bytes, 最后将bytes写入文件.<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> each <span class="keyword">in</span> splited:</div><div class="line">    fout.write(pack(<span class="string">'I'</span>, int(each, <span class="number">2</span>)))</div></pre></td></tr></table></figure></p>
-<p>pack(fmt, v)会将值根据fmt指定的格式将v转换成bytes对象. ‘I’表示unsigned int, 大小为32bit.</p>
-<p>因为int是4字节的, 为了不让pack()的结果前面有很多0, 从而浪费空间. 所以我们以32为长度切分字符串.</p>
-<p><strong>note:</strong></p>
-<p>首先，我们需要写入一些头部信息。包括符号的个数，每个符号对应的频数。这是解压缩必要的信息。</p>
-<p>最后一串字符串长度不一定为32, 所以还要额外的将其长度记录下来。同样也是为了解压缩所必要的。</p>
-<p>代码<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> struct <span class="keyword">import</span> pack</div><div class="line"><span class="keyword">from</span> re <span class="keyword">import</span> findall</div><div class="line"></div><div class="line">fout.write(pack(<span class="string">'I'</span>, len(freq)))</div><div class="line"><span class="keyword">for</span> key, val <span class="keyword">in</span> freq.items():</div><div class="line">    fout.write(pack(<span class="string">'I'</span>, key))</div><div class="line">    fout.write(pack(<span class="string">'I'</span>, val))</div><div class="line"></div><div class="line">whole = <span class="string">''</span>.join([huffman_code[d] <span class="keyword">for</span> d <span class="keyword">in</span> data])</div><div class="line">splited = findall(<span class="string">'.&#123;1,32&#125;'</span>, whole)</div><div class="line"></div><div class="line"><span class="keyword">for</span> each <span class="keyword">in</span> splited:</div><div class="line">    fout.write(pack(<span class="string">'I'</span>, int(each, <span class="number">2</span>)))</div><div class="line">fout.write(pack(<span class="string">'I'</span>, len(splited[<span class="number">-1</span>])))</div><div class="line"></div><div class="line">fin.close()</div><div class="line">fout.close()</div></pre></td></tr></table></figure></p>
-<h4 id="对文件解压缩"><a href="#对文件解压缩" class="headerlink" title="对文件解压缩"></a>对文件解压缩</h4><p><strong>原理</strong></p>
-<p>根据压缩文件的头部信息建立最优二叉树. 接着读取后面的内容, 将每字节的信息转成成字符串(也就是压缩时得到的字符串).</p>
-<p>遍历字符串, 遇到’0’指向左子节点, 遇到’1’指向右子节点. 直到叶子节点为止, 将叶子节点的值写入解压缩文件中, 并指回根节点.</p>
-<p><strong>note</strong></p>
-<p>同样的, 最后的部分要特别处理.</p>
-<p>整个过程就是压缩逆过程，直接上代码<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> struct <span class="keyword">import</span> unpack</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">decompress</span><span class="params">(src, dest)</span>:</span></div><div class="line">    fin = open(src, <span class="string">'rb'</span>)</div><div class="line">    fout = open(dest, <span class="string">'wb'</span>)</div><div class="line"></div><div class="line">    node_num = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">    freq = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(node_num):</div><div class="line">        key = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">        val = unpack(<span class="string">'I'</span>, fin.read(<span class="number">4</span>))[<span class="number">0</span>]</div><div class="line">        freq[key] = val</div><div class="line">    root = huffman.buildTree(freq)</div><div class="line"></div><div class="line">    splited = []</div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">        data = fin.read(<span class="number">4</span>)</div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> data:</div><div class="line">            <span class="keyword">break</span></div><div class="line">        code = bin(unpack(<span class="string">'I'</span>, data)[<span class="number">0</span>])[<span class="number">2</span>:].zfill(<span class="number">32</span>)</div><div class="line">        splited.append(code)</div><div class="line"></div><div class="line">    length = int(splited.pop(), <span class="number">2</span>)</div><div class="line">    splited[<span class="number">-1</span>] = splited[<span class="number">-1</span>][-length:]</div><div class="line">    whole = <span class="string">''</span>.join(splited)</div><div class="line"></div><div class="line">    cur = root</div><div class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> whole:</div><div class="line">        cur = cur.left_child <span class="keyword">if</span> each == <span class="string">'0'</span> <span class="keyword">else</span> cur.right_child</div><div class="line">        <span class="keyword">if</span> cur.value <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</div><div class="line">            fout.write(int2byte(cur.value))</div><div class="line">            cur = root</div><div class="line"></div><div class="line">    fin.close()</div><div class="line">    fout.close()</div></pre></td></tr></table></figure></p>
-<h4 id="完善程序命令行参数何选项"><a href="#完善程序命令行参数何选项" class="headerlink" title="完善程序命令行参数何选项"></a>完善程序命令行参数何选项</h4><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">from</span> argparse <span class="keyword">import</span> ArgumentParser</div><div class="line"></div><div class="line">parser = ArgumentParser(description=<span class="string">'compress file using huffman coding'</span>)</div><div class="line">parser.add_argument(<span class="string">'file'</span>)</div><div class="line">parser.add_argument(<span class="string">'-d'</span>, action=<span class="string">'store_true'</span>, help=<span class="string">'decompress file'</span>)</div><div class="line">parser.add_argument(<span class="string">'-o'</span>, default=<span class="string">'a'</span>, help=<span class="string">'name of output file, "a" by default'</span>)</div><div class="line">parser.add_argument(<span class="string">'--delete'</span>, action=<span class="string">'store_true'</span>, help=<span class="string">'delete the source\</span></div><div class="line">                            file if this option is specific')</div><div class="line">args = parser.parse_args()</div><div class="line"></div><div class="line"><span class="keyword">if</span>(args.d):</div><div class="line">    decompress(args.file, args.o)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    compress(args.file, args.o)</div><div class="line">    print(<span class="string">'before compress: &#123;0&#125; Bytes'</span>.format(os.path.getsize(args.file)))</div><div class="line">    print(<span class="string">'after  compress: &#123;0&#125; Bytes'</span>.format(os.path.getsize(args.o)))</div><div class="line"></div><div class="line"><span class="keyword">if</span>(args.delete):</div><div class="line">    os.remove(args.file)</div></pre></td></tr></table></figure>
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ python compress.py test_input.txt -o output</div><div class="line"></div><div class="line">before compress: <span class="number">887071</span> Bytes</div><div class="line">after  compress: <span class="number">503056</span> Bytes</div></pre></td></tr></table></figure>
-
-          
-        
+<p>霍夫曼编码通过构建一颗最优二叉树(一种带权路径长度最短的二叉树)来为符号分配编码.所谓树的带权路径长度，就是树中所有的叶结点的权值乘上其到根结点的路径长度. <strong>权值为符号出现频数</strong>.<br><a href="https://dn-anything-about-doc.qbox.me/document-uid18510labid2439timestamp1482735103035.png/wm"></a></p>
+        <!-- 压缩原理对于文本文件，里面的每一个字符都是8位的ASCII字符.
+比如对于’python’, 是这样存储的:
+01110000 01111001 ‭01110100‬ ‭01101000‬ ‭01101111‬ 01101110‬
+我们可以为每个字符指定一个编码, 满足不同的字符编码不同, 出现频率高的字符分配到的编码短的条件.比如为’python’的6个字符分别分配0, 1, 00, 01......  -->
+        <p class="article-more-link">
+          <a href="/2017/02/20/文本文件压缩(Python)/#more">Read More</a>
+        </p>
       
     </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
     </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-
-          
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
   </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="Wayne" />
-          <p class="site-author-name" itemprop="name">Wayne</p>
-           
-              <p class="site-description motion-element" itemprop="description">一个迟钝的人</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/Atooom" target="_blank" title="Github">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  Github
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/p/1005051761956804" target="_blank" title="微博">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  微博
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.tumblr.com/blog/leafvv" target="_blank" title="tumblr">
-                  
-                    <i class="fa fa-fw fa-tumblr"></i>
-                  
-                  tumblr
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/Atooom" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  知乎
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://stackoverflow.com/users/7588210/atooom" target="_blank" title="overflow">
-                  
-                    <i class="fa fa-fw fa-stack-overflow"></i>
-                  
-                  overflow
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Wayne</span>
-</div>
+</article>
+
+<!-- Table of Contents -->
+
+  
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
-
-
-        
-
+</section>
         
       </div>
-    </footer>
+      
+        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
+      
+      <footer id="footer">
+  
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-    
+  <div class="container">
+      <div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2017 - 2017 CODE is POETRY All Rights Reserved.</p>
+	      <p id="copyRightCn">Wayne hold copyright</p>
+	</div>
   </div>
+</footer>
 
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
   
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+  <script src="/js/home.js"></script>
 
 
 
@@ -913,102 +376,74 @@
 
 
 
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            CODE is POETRY
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 Wayne All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
   
 
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
 
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
 
 </body>
 </html>
