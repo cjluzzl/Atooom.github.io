@@ -9,15 +9,24 @@
   
   
   
-  <meta name="description" content="Nothing is pure. But solitude.">
-<meta property="og:type" content="website">
+  <meta name="description" content="高斯模糊原理对于一张图片, 如果每个像素点都和与它临近的像素点相似, 那么这张图片看起来就比较的模糊.
+自然地, 我们可以让每个像素点的值等于其周围像素点值的平均值, 从而达到模糊图片的效果.
+如何取平均值我们将周围的点定义为: 在水平, 竖直, 主对角线, 副对角线四个方向上, 每个方向关于像素点对称的两侧各取的r个点. r就称为模糊半径.显然r越大, 模糊效果就越明显.上面的图片分别是原图,">
+<meta property="og:type" content="article">
 <meta property="og:title" content="CODE is POETRY">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/03/29/高斯模糊/index.html">
 <meta property="og:site_name" content="CODE is POETRY">
-<meta property="og:description" content="Nothing is pure. But solitude.">
+<meta property="og:description" content="高斯模糊原理对于一张图片, 如果每个像素点都和与它临近的像素点相似, 那么这张图片看起来就比较的模糊.
+自然地, 我们可以让每个像素点的值等于其周围像素点值的平均值, 从而达到模糊图片的效果.
+如何取平均值我们将周围的点定义为: 在水平, 竖直, 主对角线, 副对角线四个方向上, 每个方向关于像素点对称的两侧各取的r个点. r就称为模糊半径.显然r越大, 模糊效果就越明显.上面的图片分别是原图,">
+<meta property="og:image" content="http://om0tbjmwl.bkt.clouddn.com/gakki-1.jpg">
+<meta property="og:updated_time" content="2017-03-29T13:39:58.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CODE is POETRY">
-<meta name="twitter:description" content="Nothing is pure. But solitude.">
+<meta name="twitter:description" content="高斯模糊原理对于一张图片, 如果每个像素点都和与它临近的像素点相似, 那么这张图片看起来就比较的模糊.
+自然地, 我们可以让每个像素点的值等于其周围像素点值的平均值, 从而达到模糊图片的效果.
+如何取平均值我们将周围的点定义为: 在水平, 竖直, 主对角线, 副对角线四个方向上, 每个方向关于像素点对称的两侧各取的r个点. r就称为模糊半径.显然r越大, 模糊效果就越明显.上面的图片分别是原图,">
+<meta name="twitter:image" content="http://om0tbjmwl.bkt.clouddn.com/gakki-1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="CODE is POETRY" type="application/atom+xml">
   
@@ -41,9 +50,11 @@
   <link rel="stylesheet" href="/css/bootstrap.css" >
 
   
-    <link rel="stylesheet" href="/css/home.css" >
+    <link rel="stylesheet" href="/css/dialog.css">
   
 
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
   
 
   
@@ -52,120 +63,93 @@
 
 <body>
   
-    <header id="header">
-
-  
-    <div id="intrologo" class="intro-logo">
-  
-
-    <canvas width="100%" height="100%"></canvas>
-    <script>
-      var c = document.getElementsByTagName('canvas')[0],
-          x = c.getContext('2d'),
-          w = window.innerWidth,
-          h = window.innerHeight,
-          pr = window.devicePixelRatio || 1,
-          f = 90,
-          q,
-          m = Math,
-          r = 0,
-          u = m.PI*2,
-          v = m.cos,
-          z = m.random
-      c.width = w*pr
-      c.height = h*pr
-      x.scale(pr, pr)
-      x.globalAlpha = 0.6
-
-      
-        function i(){
-            x.clearRect(0,0,w,h)
-            q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
-            while(q[1].x<w+f) d(q[0], q[1])
-        }
-        function d(i,j){   
-            x.beginPath()
-            x.moveTo(i.x, i.y)
-            x.lineTo(j.x, j.y)
-            var k = j.x + (z()*2-0.25)*f,
-                n = y(j.y)
-            x.lineTo(k, n)
-            x.closePath()
-            r-=u/-50
-            x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)
-            x.fill()
-            q[0] = q[1]
-            q[1] = {x:k,y:n}
-        }
-        function y(p){
-            var t = p + (z()*2-1.1)*f
-            return (t>h||t<0) ? y(p) : t
-        }
-        document.getElementById("intrologo").onclick = i
-        document.getElementById("intrologo").ontouchstart = i
-        i()
-      
-    </script>
-    
-
-    
-      <div id="homelogo" class="homelogo"> 
-    
-
-        
-          <div class="homelogoback" >
-            <h1><a href="#content" id="logo">CODE is POETRY</a></h1>
-            <h3>Nothing is pure. But solitude.</h3>
-            <h5>Wayne</h5>
-            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
-          </div>
-        
-    
-    </div>
-  </div>
-
-  <!-- 自适应主页背景大图 -->
-  
-
- <!-- home_logo_image居中 -->
- 
-    <script>
-        var homelogodiv = document.getElementById("homelogo");
-        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
-          homelogodiv.style.width = document.body.clientWidth + "px";
-          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
-        } else {
-          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
-          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
-        }
-    </script>
-  
-
-  <div class="intro-navigate">
-      <p class="navigater-list">
-        
-          <a id="beautifont" class="main-nav-link" href="/">Home</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/archives">Archives</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/about">About</a>
-        
-      </p>
-  </div>
-
-</header>
-  
   <div id="container">
     <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/logo.png">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
       
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;">
-  
-    <article id="post-高斯模糊"  class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-高斯模糊" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -190,202 +174,61 @@
     </div>
     <footer class="article-footer">
       
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-Hexo博客笔记"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/02/27/Hexo博客笔记/">Hexo博客笔记</a>
-    </h1>
-  
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2017/03/29/高斯模糊/" data-title="" data-url="http://yoursite.com/2017/03/29/高斯模糊/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"comm"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
 
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/02/27/Hexo博客笔记/" class="article-date">
-	  <time datetime="2017-02-27T09:07:09.000Z" itemprop="datePublished">2017-02-27</time>
-	</a>
 
       
-    </div>
-    <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://om0tbjmwl.bkt.clouddn.com/earphone.jpg" alt=""></p>
-<p><strong>记录踩过的坑和一些感悟</strong></p>
-<h3 id="大道至简"><a href="#大道至简" class="headerlink" title="大道至简"></a>大道至简</h3><p>在博客配置完成后, 试过不下10个主题.</p>
-<p>作为一个肤浅的人, 自然喜欢折腾这些华丽的外在. 配置主题耗费了大量时间. 从logo到背景图, 到文章配图, 不可谓少花时间.</p>
-<p>虽说不指望多少人回访问博客, 但至少自己看着也是赏心悦目.</p>
-<p>但折腾几天就觉得索然无趣. 自己的初衷本是利用博客督促自己写作, 记录遇到的问题, 总结做过的事情. 就像一本允许外人翻看的日记.</p>
-<p>最后, 我放弃了之前所有的主题, 选择了一个颜值和简洁兼备的<a href="https://github.com/iTimeTraveler/hexo-theme-hiker">Hiker</a>主题.</p>
-<p><strong>新鲜感总会过去</strong>.</p>
-        <!-- 
-记录踩过的坑和一些感悟
-大道至简在博客配置完成后, 试过不下10个主题.
-作为一个肤浅的人, 自然喜欢折腾这些华丽的外在. 配置主题耗费了大量时间. 从logo到背景图, 到文章配图, 不可谓少花时间.
-虽说不指望多少人回访问博客, 但至少自己看着也是赏心悦目.
-但折腾几天就觉得索然无趣. 自己的初衷本是利用博客督促自己写作, 记录遇到的问题, 总结做过的事情. 就像一本允许外人翻看的日记......  -->
-        <p class="article-more-link">
-          <a href="/2017/02/27/Hexo博客笔记/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/">notes</a></li></ul>
-
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/27/Hexo博客笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo博客笔记</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
 <!-- Table of Contents -->
 
-  
-    <article id="post-MarkDown Syntax"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
     
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#高斯模糊"><span class="toc-number">1.</span> <span class="toc-text">高斯模糊</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-number">1.1.</span> <span class="toc-text">原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#如何取平均值"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">如何取平均值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#边界点的处理"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">边界点的处理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序"><span class="toc-number">1.2.</span> <span class="toc-text">程序</span></a></li></ol></li></ol>
     
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/02/26/MarkDown Syntax/">MarkDown Syntax</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/02/26/MarkDown Syntax/" class="article-date">
-	  <time datetime="2017-02-26T13:50:12.000Z" itemprop="datePublished">2017-02-26</time>
-	</a>
-
-      
     </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://om0tbjmwl.bkt.clouddn.com/keyboard.jpg" alt=""></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="为什么使用markdown"><a href="#为什么使用markdown" class="headerlink" title="为什么使用markdown"></a>为什么使用markdown</h3><ol>
-<li>用markdown写成的文件是纯文本文件, 任何Text Editor都能打开.</li>
-<li>语法简单, 只要10分钟的学习就可以开始写作.</li>
-<li>轻松转换成pdf, html的文件格式</li>
-<li>被广泛使用, 这是最客观的原因.</li>
-<li>比起用word写作, markdown减少了手在键盘和鼠标间的切换, 让你更专注写作.</li>
-</ol>
-<h3 id="推荐markdown编辑器-windows"><a href="#推荐markdown编辑器-windows" class="headerlink" title="推荐markdown编辑器(windows)"></a>推荐markdown编辑器(windows)</h3><ul>
-<li><p><a href="http://chenguanzhou.github.io/MarkDownEditor/" title="Offical Website">MarkDownEditor</a></p>
-</li>
-<li><p><a href="http://markdownpad.com">MarkDownPad</a></p>
-</li>
-</ul>
-<p><strong>本文由MarkdownEditor撰写.</strong></p>
-<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>段落的前后应该至少有一个空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）.</p>
-<p>值得一提的是, 没必要在段首用空格或制表符来缩进. 一方面段落间的空白已足够区分两个段落, 另一方面markdown也不支持.</p>
-        <!-- 
-前言为什么使用markdown
-用markdown写成的文件是纯文本文件, 任何Text Editor都能打开.
-语法简单, 只要10分钟的学习就可以开始写作.
-轻松转换成pdf, html的文件格式
-被广泛使用, 这是最客观的原因.
-比起用word写作, markdown减少了手在键盘和鼠标间的切换, 让你更专注写作.
-
-推荐markdown编辑器(windows)
-MarkDownEd......  -->
-        <p class="article-more-link">
-          <a href="/2017/02/26/MarkDown Syntax/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-文本文件压缩(Python)"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/02/20/文本文件压缩(Python)/">文本文件压缩(Python)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/02/20/文本文件压缩(Python)/" class="article-date">
-	  <time datetime="2017-02-20T13:50:12.000Z" itemprop="datePublished">2017-02-20</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://om0tbjmwl.bkt.clouddn.com/python.png" alt=""></p>
-<h2 id="压缩原理"><a href="#压缩原理" class="headerlink" title="压缩原理"></a>压缩原理</h2><p>对于文本文件，里面的每一个字符都是8位的ASCII字符.</p>
-<p>比如对于’python’, 是这样存储的:</p>
-<p>01110000 01111001 ‭01110100‬ ‭01101000‬ ‭01101111‬ 01101110‬</p>
-<p>我们可以为每个字符指定一个编码, 满足不同的字符编码不同, 出现频率高的字符分配到的编码短的条件.比如为’python’的6个字符分别分配0, 1, 00, 01, 10, 11的编码. 再将编码信息(0100011011)写入文件, 就达到了压缩的目的.</p>
-<h2 id="霍夫曼编码-Huffman-Coding"><a href="#霍夫曼编码-Huffman-Coding" class="headerlink" title="霍夫曼编码(Huffman Coding)"></a>霍夫曼编码(Huffman Coding)</h2><p><a href="https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81">霍夫曼编码-维基百科</a></p>
-<p>霍夫曼编码是无损数据压缩和权编码算法. 所谓权编码, 就是根据源符号出现的概率大小分配不同长度的编码。出现概率高的符号分配短码，概率低的符号分配长码.</p>
-<p>霍夫曼编码通过构建一颗最优二叉树(一种带权路径长度最短的二叉树)来为符号分配编码.所谓树的带权路径长度，就是树中所有的叶结点的权值乘上其到根结点的路径长度. <strong>权值为符号出现频数</strong>.<br><a href="https://dn-anything-about-doc.qbox.me/document-uid18510labid2439timestamp1482735103035.png/wm"></a></p>
-        <!-- 
-压缩原理对于文本文件，里面的每一个字符都是8位的ASCII字符.
-比如对于’python’, 是这样存储的:
-01110000 01111001 ‭01110100‬ ‭01101000‬ ‭01101111‬ 01101110‬
-我们可以为每个字符指定一个编码, 满足不同的字符编码不同, 出现频率高的字符分配到的编码短的条件.比如为’python’的6个字符分别分配0, 1, 00, 0......  -->
-        <p class="article-more-link">
-          <a href="/2017/02/20/文本文件压缩(Python)/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-
-
+  </aside>
 </section>
         
       </div>
-      
-        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
       
       <footer id="footer">
   
@@ -471,9 +314,9 @@ MarkDownEd......  -->
 <script src="/js/bootstrap.js"></script>
 
 
-  <script src="/js/home.js"></script>
 
 
+  <script src="/js/dialog.js"></script>
 
 
 
